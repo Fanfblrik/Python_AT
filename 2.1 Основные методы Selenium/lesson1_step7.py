@@ -8,14 +8,14 @@ def calc(x):
     return str(math.log(abs(12 * math.sin(int(x)))))
 
 
-link = "https://suninjuly.github.io/math.html"
+link = "http://suninjuly.github.io/get_attribute.html"
 browser = webdriver.Chrome()
 
 try:
     browser.get(link)
 
-    x_element = browser.find_element(By.CSS_SELECTOR, "#input_value")
-    x = x_element.text
+    x_element = browser.find_element(By.CSS_SELECTOR, "#treasure")
+    x = x_element.get_attribute("valuex")
     y = calc(x)
     input1 = browser.find_element(By.CSS_SELECTOR, "#answer")
     input1.send_keys(y)
@@ -30,5 +30,8 @@ try:
 
 finally:
 
+    print()
+    print("Yeah! That's it!")
+    print()
     time.sleep(5)
     browser.quit()
