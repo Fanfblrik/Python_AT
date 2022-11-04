@@ -3,8 +3,8 @@ from selenium.webdriver.common.by import By
 import time
 import os
 
-with open("test.txt", "w") as file:
-    content = file.write("automationbypython")  # create test.txt file
+# with open("test.txt", "w") as file:
+#     content = file.write("automationbypython")  # create test.txt file
 current_dir = os.path.abspath(os.path.dirname(__file__))    # получаем путь к директории текущего исполняемого файла
 file_path = os.path.join(current_dir, 'test.txt')           # добавляем к этому пути имя файла
 
