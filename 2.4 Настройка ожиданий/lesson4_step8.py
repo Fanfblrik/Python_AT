@@ -23,8 +23,8 @@ try:
     browser.find_element(By.CSS_SELECTOR, "#book").click()
     x_element = browser.find_element(By.CSS_SELECTOR, "#input_value")
     browser.execute_script("return arguments[0].scrollIntoView(true);", x_element)
-    x = x_element.text
-    y = calc(x)
+    a = x_element.text
+    y = calc(a)
     input1 = browser.find_element(By.CSS_SELECTOR, "#answer")
     input1.send_keys(y)
     input3 = browser.find_element(By.CSS_SELECTOR, "#solve")
